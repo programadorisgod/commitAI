@@ -1,0 +1,39 @@
+{
+  "name": "commitai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development tsnd --respawn --clear --ignore-watch node_modules src/index.ts ",
+    "build": "rimraf ./dist && tsc",
+    "start": "pnpm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "3.3.2",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.36",
+    "@types/express": "^4.17.21",
+    "ai": "^3.2.22",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "loading-cli": "^1.1.2",
+    "ollama": "^0.5.2",
+    "ollama-ai-provider": "^0.10.0",
+    "zod": "^3.23.8"
+  }
+}
